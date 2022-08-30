@@ -1,0 +1,75 @@
+@mixin transform($value) {
+  -webkit-transform: ($value);
+  -moz-transform: ($value);
+  -ms-transform: ($value);
+  transform: ($value);
+}
+@mixin transition($value) {
+  -webkit-transition: ($value);
+  -moz-transition: ($value);
+  -ms-transition: ($value);
+  transition: ($value);
+}
+
+@mixin show() {
+  @keyframes show {
+    0% {
+    }
+    100% {
+      @include transform(translate3d(0, 0px, 0));
+    }
+  }
+}
+
+@mixin slideRight() {
+  @keyframes slideRight {
+    0% {
+      left: 0px;
+    }
+    100% {
+      left: -1000px;
+    }
+  }
+}
+@mixin slideUp() {
+  @keyframes slideUp {
+    0% {
+      top: -1000px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+}
+@mixin slideDown() {
+  @keyframes slideDown {
+    0% {
+      bottom: -1000px;
+    }
+    100% {
+      bottom: 0px;
+    }
+  }
+}
+
+@mixin up() {
+  @keyframes up {
+    0% {
+    }
+    30% {
+      @include transform(translate3d(0, -7px, 0));
+    }
+    60% {
+      @include transform(translate3d(0, -4px, 0));
+    }
+    80% {
+      @include transform(translate3d(0, -7px, 0));
+    }
+    90% {
+      @include transform(translate3d(0, -5px, 0));
+    }
+    100% {
+      @include transform(translate3d(0, 0px, 0px));
+    }
+  }
+}

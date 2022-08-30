@@ -1,0 +1,50 @@
+@use 'sass/typography' as *
+@use 'sass/themes' as *
+
+.heading1
+  @include heading1
+  @media screen and (max-width: 480px)
+    @include heading1--sm
+.heading2
+  @include heading2
+  @media screen and (max-width: 480px)
+    @include heading2--sm
+.heading3
+  @include heading3
+  @media screen and (max-width: 480px)
+    @include heading3--sm
+.heading4
+  @include heading4
+  @media screen and (max-width: 480px)
+    @include heading4--sm
+.heading5
+  @include heading5
+  @media screen and (max-width: 480px)
+    @include heading5--sm
+.heading6
+  @include heading6
+  @media screen and (max-width: 480px)
+    @include heading6--sm
+
+.bodyTextLG
+  @include body-text--lg
+.bodyTextSM
+  @include body-text--sm
+
+.captionTextLG
+  @include caption-text--lg
+.captionTextSM
+  @include caption-text--sm
+
+.buttonText
+  @include button-text
+
+.labelItalic
+  @include label-italic
+
+.stress
+  font-weight: 600 // semi-bold
+
+.allCaps
+  font-weight: 400 // regular
+  text-transform: uppercase

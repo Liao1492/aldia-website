@@ -1,0 +1,436 @@
+@use "sass" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* playfair-display-regular - latin */
+@include show;
+@include up;
+@include slideUp;
+@include slideDown;
+@include slideRight;
+
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-regular.woff2")
+//     format("woff2");
+// }
+// /* playfair-display-500 - latin */
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-500.woff2")
+//     format("woff2");
+// }
+// /* playfair-display-600 - latin */
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: normal;
+//   font-weight: 600;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-600.woff2")
+//     format("woff2");
+// }
+// /* playfair-display-700 - latin */
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-700.woff2")
+//     format("woff2");
+// }
+// /* playfair-display-800 - latin */
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: normal;
+//   font-weight: 800;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-800.woff2")
+//     format("woff2");
+// }
+// /* playfair-display-900 - latin */
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: normal;
+//   font-weight: 900;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-900.woff2")
+//     format("woff2");
+// }
+// /* playfair-display-italic - latin */
+// @font-face {
+//   font-family: "Playfair Display";
+//   font-style: italic;
+//   font-weight: 400;
+//   src: url("../src/assets/fonts/playfair-display-v30-latin-italic.woff2")
+//     format("woff2");
+// }
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../src/assets/fonts/Butler_Light.otf") format("otf");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/fonts/Butler_Regular.otf") format("otf");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/fonts/Butler_Medium.otf") format("otf");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/assets/fonts/Butler_Bold.otf") format("otf");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../src/assets/fonts/Butler_ExtraBold.otf") format("otf");
+}
+@font-face {
+  font-family: "Butler";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../src/assets/fonts/Butler_Black.otf") format("otf");
+}
+#__next {
+  overflow: hidden;
+}
+.background-image {
+  background-image: url("../src/assets/img/bg4.png");
+  background-size: cover;
+  min-height: 100vh;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Butler";
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+  font-size: 1.8rem;
+  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.2);
+
+  &__none {
+    z-index: 0;
+  }
+  .nav-link {
+    text-decoration: none;
+    position: relative;
+    &::after {
+      bottom: -4px;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 0;
+      position: absolute;
+      background: black;
+      opacity: 0.6;
+      transition: width 0.3s ease 0s, opacity 0.3s ease 0s;
+      width: 0;
+    }
+    &:hover::after {
+      width: 100%;
+      opacity: 0.9;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.navbar-menu {
+  position: relative;
+}
+
+.burger-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #5dc6f1;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 30%;
+  right: -15rem;
+  top: 50%;
+  transition: all 0.3s ease-out 0s;
+  z-index: 50;
+  @media screen and (max-width: 1200px) {
+    transform: translateX(-20rem);
+  }
+  &__opened {
+    transform: translateX(-20rem);
+  }
+}
+
+.stack {
+  min-height: 300px;
+}
+
+.translateX20 {
+  transform: translateX(-20rem);
+}
+.navbar-opened {
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: grid;
+  grid-template-areas:
+    "left left left header header header "
+    "left left left header  header header"
+    "bottom bottom contact header header header";
+}
+.zIndex {
+  z-index: 20;
+}
+.item-a {
+  // animation: slideUp 0.3s ease-out;
+  top: -1000px;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  grid-area: header;
+
+  background-color: rgb(36, 36, 36);
+  transition: all 0.5s ease-out;
+
+  &__opened {
+    top: 0px;
+  }
+  &__container {
+    margin: 0 auto 0 auto;
+  }
+  .link-list {
+    margin: auto 0 auto 0;
+    color: white;
+    list-style: none;
+    font-size: 5rem;
+    font-weight: bold;
+    width: fit-content;
+    .link-item {
+      transition: all 1s ease;
+      cursor: pointer;
+    }
+    .link-item:hover {
+      color: #5dc6f1;
+    }
+  }
+}
+.item-b {
+  // animation: slideRight 0.3s ease-out;
+  left: -1000px;
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  grid-area: left;
+  transition: all 0.5s ease-out;
+  background-color: #5dc6f1;
+  .back-image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../src/assets/img/jobhunt3.png");
+    opacity: 0.5;
+    background-size: cover;
+  }
+  &__opened {
+    left: 0px;
+  }
+  .nav-dash {
+    position: relative;
+    height: 100%;
+    z-index: 10;
+    overflow: scroll;
+  }
+}
+.item-c {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // animation: slideDown 0.3s ease-out;
+  bottom: -1000px;
+  grid-area: bottom;
+  background-color: #386583;
+  transition: all 0.5s ease-out;
+
+  &__opened {
+    bottom: 0px;
+  }
+}
+.item-d {
+  grid-area: contact;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: #184869;
+  transition: all 0.5s ease-out;
+
+  &__opened {
+    width: 100%;
+  }
+}
+
+.hero-section {
+  padding-top: 10rem;
+}
+.hero-container {
+  height: 10rem;
+  overflow: hidden;
+}
+
+.letter {
+  display: inline-block;
+  color: #282828;
+  position: relative;
+  z-index: 1;
+  top: 0px;
+  line-height: 120px;
+  top: 0px;
+  margin-right: -10px;
+  @include transform(translate3d(0, 120px, 0));
+}
+
+.a {
+  &::after {
+    content: "A";
+  }
+}
+
+.l {
+  &::after {
+    content: "l";
+  }
+}
+
+.d {
+  &::after {
+    content: "d";
+  }
+}
+
+.i {
+  &::after {
+    content: "i";
+  }
+}
+.a2 {
+  &::after {
+    content: "a";
+  }
+}
+.a,
+.l,
+.d,
+.i,
+.a2 {
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    @include transition(all 1s);
+    color: balck;
+    -webkit-text-stroke: 5px;
+    opacity: 1;
+    z-index: 100;
+  }
+}
+@for $i from 1 through 7 {
+  .letter:nth-child(#{$i}) {
+    animation-delay: (#{1 + $i * 0.1s});
+    -webkit-animation-delay: (#{1 + $i * 0.1s});
+    &:after {
+      animation-delay: (#{2.5 + $i * 0.2s});
+      -webkit-animation-delay: (#{2.5 + $i * 0.2s});
+    }
+  }
+}
+.letter {
+  -webkit-animation: show 0.3s 1s 1 ease-out forwards;
+  -moz-animation: show 0.3s 1s 1 ease-out forwards;
+  -o-animation: show 0.3s 1s 1 ease-out forwards;
+  animation: show 0.3s 1s 1 ease-out forwards;
+}
+
+.dash-men {
+  font-size: 1.4rem;
+}
+
+.btn-dash {
+  transition: all 0.2s ease-in;
+  &:hover {
+    background-color: transparent;
+    transform: translateX(5px);
+  }
+}
+
+.job-boxes {
+  min-height: 120px;
+  width: 90%;
+  margin: auto;
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  .job-content {
+    display: flex;
+    align-items: center;
+  }
+  .button-fav {
+    background-color: transparent;
+    &:hover {
+      background-color: transparents;
+    }
+  }
+}
+
+.stroke {
+  position: relative;
+}
+.backImage {
+  position: absolute;
+
+  left: -100px;
+  z-index: -1;
+  &2 {
+    position: absolute;
+    right: -50px;
+    z-index: -1;
+  }
+}
+
+.our-service-section {
+  // background-image: url("../src/assets/img/OurService.jpg");
+  // background-size: ;
+}
+
+.background {
+  // background: rgb(205, 248, 255);
+  // background: linear-gradient(
+  //   360deg,
+  //   rgba(205, 248, 255, 1) 0%,
+  //   rgba(176, 242, 255, 1) 0%,
+  //   rgba(195, 246, 255, 1) 4%,
+  //   rgba(255, 255, 255, 1) 100%
+  // );
+}
+//Button
