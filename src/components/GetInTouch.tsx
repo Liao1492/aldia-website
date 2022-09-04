@@ -108,7 +108,7 @@ export function GetInTouch() {
   const { classes } = useStyles();
 
   return (
-    <Paper shadow="md" radius="lg" className="w-[70%] m-auto mt-32">
+    <Paper shadow="md" radius="lg" className="w-[70%] m-auto mt-32 mb-32">
       <div className={classes.wrapper}>
         <div className={classes.contacts}>
           <Text

@@ -11,11 +11,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Navbar />
-      <div className="background">
+      <div className="background bg-slate-50">
         {/* {changeNavBar && <NavbarMobile />} */}
         <Component {...pageProps} />
+
+        <FooterAldia />
       </div>
-      <FooterAldia />
     </>
   );
 }

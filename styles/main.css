@@ -118,6 +118,7 @@ body {
   margin: 0;
   font-family: "Butler";
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 * {
@@ -246,7 +247,6 @@ body {
   height: 100%;
   grid-area: left;
   transition: all 0.5s ease-out;
-  background-color: #5dc6f1;
 }
 .item-b .back-image {
   position: absolute;
@@ -263,7 +263,7 @@ body {
   position: relative;
   height: 100%;
   z-index: 10;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .item-c {
@@ -300,129 +300,6 @@ body {
   overflow: hidden;
 }
 
-.letter {
-  display: inline-block;
-  color: #282828;
-  position: relative;
-  z-index: 1;
-  top: 0px;
-  line-height: 120px;
-  top: 0px;
-  margin-right: -10px;
-  -webkit-transform: translate3d(0, 120px, 0);
-  -moz-transform: translate3d(0, 120px, 0);
-  -ms-transform: translate3d(0, 120px, 0);
-  transform: translate3d(0, 120px, 0);
-}
-
-.a::after {
-  content: "A";
-}
-
-.l::after {
-  content: "l";
-}
-
-.d::after {
-  content: "d";
-}
-
-.i::after {
-  content: "i";
-}
-
-.a2::after {
-  content: "a";
-}
-
-.a:after,
-.l:after,
-.d:after,
-.i:after,
-.a2:after {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -ms-transition: all 1s;
-  transition: all 1s;
-  color: balck;
-  -webkit-text-stroke: 5px;
-  opacity: 1;
-  z-index: 100;
-}
-
-.letter:nth-child(1) {
-  animation-delay: 1.1s;
-  -webkit-animation-delay: 1.1s;
-}
-.letter:nth-child(1):after {
-  animation-delay: 2.7s;
-  -webkit-animation-delay: 2.7s;
-}
-
-.letter:nth-child(2) {
-  animation-delay: 1.2s;
-  -webkit-animation-delay: 1.2s;
-}
-.letter:nth-child(2):after {
-  animation-delay: 2.9s;
-  -webkit-animation-delay: 2.9s;
-}
-
-.letter:nth-child(3) {
-  animation-delay: 1.3s;
-  -webkit-animation-delay: 1.3s;
-}
-.letter:nth-child(3):after {
-  animation-delay: 3.1s;
-  -webkit-animation-delay: 3.1s;
-}
-
-.letter:nth-child(4) {
-  animation-delay: 1.4s;
-  -webkit-animation-delay: 1.4s;
-}
-.letter:nth-child(4):after {
-  animation-delay: 3.3s;
-  -webkit-animation-delay: 3.3s;
-}
-
-.letter:nth-child(5) {
-  animation-delay: 1.5s;
-  -webkit-animation-delay: 1.5s;
-}
-.letter:nth-child(5):after {
-  animation-delay: 3.5s;
-  -webkit-animation-delay: 3.5s;
-}
-
-.letter:nth-child(6) {
-  animation-delay: 1.6s;
-  -webkit-animation-delay: 1.6s;
-}
-.letter:nth-child(6):after {
-  animation-delay: 3.7s;
-  -webkit-animation-delay: 3.7s;
-}
-
-.letter:nth-child(7) {
-  animation-delay: 1.7s;
-  -webkit-animation-delay: 1.7s;
-}
-.letter:nth-child(7):after {
-  animation-delay: 3.9s;
-  -webkit-animation-delay: 3.9s;
-}
-
-.letter {
-  -webkit-animation: show 0.3s 1s 1 ease-out forwards;
-  -moz-animation: show 0.3s 1s 1 ease-out forwards;
-  -o-animation: show 0.3s 1s 1 ease-out forwards;
-  animation: show 0.3s 1s 1 ease-out forwards;
-}
-
 .dash-men {
   font-size: 1.4rem;
 }
@@ -436,7 +313,8 @@ body {
 }
 
 .job-boxes {
-  min-height: 120px;
+  min-height: 140px;
+  cursor: pointer;
   width: 90%;
   margin: auto;
 }
@@ -459,14 +337,61 @@ body {
 }
 
 .backImage {
+  width: 100%;
   position: absolute;
   left: -100px;
-  z-index: -1;
+  z-index: 0;
 }
 .backImage2 {
+  max-width: 90vw;
   position: absolute;
-  right: -50px;
-  z-index: -1;
+  right: 20px;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+.text__service {
+  position: relative;
+  z-index: 1;
+}
+
+.card {
+  cursor: pointer;
+  z-index: 20;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 42rem;
+}
+.card__side {
+  height: 42rem;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.card__side--back {
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0);
+}
+
+.buttonCard {
+  padding: 1rem 3rem;
+  background-color: #386583;
+}
+
+.buttonCard:hover {
+  background-color: #184869;
 }
 
 /*# sourceMappingURL=main.css.map */

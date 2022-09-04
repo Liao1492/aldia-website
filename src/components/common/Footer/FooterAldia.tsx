@@ -11,7 +11,6 @@ import {
   IconBrandYoutube,
   IconBrandInstagram,
 } from "@tabler/icons";
-import { link } from "fs";
 import Image from "next/image";
 import Logo from "../../../assets/logo/Aldia-logo.png";
 
@@ -19,7 +18,7 @@ const useStyles = createStyles((theme) => ({
   footer: {
     position: "relative",
     zIndex: 6,
-    marginTop: 120,
+
     paddingTop: theme.spacing.xl * 2,
     backgroundColor:
       theme.colorScheme === "dark"
