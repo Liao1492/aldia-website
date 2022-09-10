@@ -48,7 +48,9 @@ const JobDetail = ({
         },
       })}
       className={`job-boxes ${className}`}
-      onClick={addSelected}
+      onClick={(e: any) => {
+        addSelected(e);
+      }}
     >
       <div className="job-content flex justify-between">
         <div className="flex flex-col">
