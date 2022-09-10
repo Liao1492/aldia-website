@@ -7,8 +7,8 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 interface IProps {
   className?: string;
   id_num?: number;
-  setActiveElement: (val: string) => void;
-  activeElement: string;
+  setActiveElement?: (val: string) => void;
+  activeElement?: string;
 }
 
 const JobDetail = ({
@@ -25,7 +25,7 @@ const JobDetail = ({
     console.log(activeElement);
     console.log(selectedElement);
     console.log(elementId);
-    if (elementId) {
+    if (elementId && setActiveElement) {
       console.log("INSIDE");
       setActiveElement(elementId);
     }
