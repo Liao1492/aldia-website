@@ -119,6 +119,7 @@ body {
   font-family: "Butler";
   font-size: 62.5%;
   overflow-x: hidden;
+  color: #19192b;
 }
 
 * {
@@ -137,6 +138,7 @@ body {
   z-index: 0;
 }
 .navbar .nav-link {
+  cursor: pointer;
   text-decoration: none;
   position: relative;
 }
@@ -321,6 +323,10 @@ body {
 .job-boxes:hover {
   transform: translateY(-2px);
 }
+.job-boxes--active {
+  border: 2px solid #5dc6f1;
+  transform: translateY(-2px);
+}
 .job-boxes .job-content {
   display: flex;
   align-items: center;
@@ -334,6 +340,29 @@ body {
 
 .stroke {
   position: relative;
+  transition: all 1s ease;
+}
+.stroke--active1 {
+  top: 0px;
+  left: 0px;
+  opacity: 1;
+}
+.stroke--active2 {
+  top: 0px;
+  right: 0px;
+  opacity: 1;
+}
+
+.stroke--left {
+  top: -200px;
+  left: -200px;
+  opacity: 0;
+}
+
+.stroke--right {
+  top: -100px;
+  right: -200px;
+  opacity: 0;
 }
 
 .backImage {
@@ -357,7 +386,7 @@ body {
 
 .card {
   cursor: pointer;
-  z-index: 20;
+  z-index: 5;
   perspective: 150rem;
   -moz-perspective: 150rem;
   height: 42rem;
@@ -392,6 +421,82 @@ body {
 
 .buttonCard:hover {
   background-color: #184869;
+}
+
+.arrow {
+  transition: all 0.5s;
+}
+
+.arrowDown {
+  transform: rotate(0deg);
+}
+
+.arrowUp {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.dropdownMenu--inactive {
+  height: 0%;
+}
+.dropdownMenu--active {
+  height: 14rem;
+}
+
+.subLink {
+  transition: all 0.5s;
+  width: fit-content;
+}
+.subLink:hover {
+  font-weight: 600;
+}
+
+.cardIndustry {
+  border-radius: 15px;
+  overflow: hidden;
+  background-image: url("../src/assets/img/factory.jpg");
+  background-size: cover;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cardIndustry::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.cardIndustry::before:hover {
+  background-color: #5dc6f1;
+}
+.cardIndustry:hover {
+  background: linear-gradient(rgba(93, 198, 241, 0.5), rgba(93, 198, 241, 0.5)), url("../src/assets/img/factory.jpg");
+  background-size: cover;
+}
+.cardIndustry:hover .learn-more {
+  bottom: 10px;
+}
+
+.learn-more {
+  position: relative;
+  bottom: -90px;
+  transition: all 0.5s;
+}
+.learn-more:hover {
+  transform: translateX(5px);
+  color: #5dc6f1;
 }
 
 /*# sourceMappingURL=main.css.map */

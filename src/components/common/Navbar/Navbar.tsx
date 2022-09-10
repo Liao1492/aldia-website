@@ -5,10 +5,11 @@ import Link from "next/link";
 import { Burger } from "@mantine/core";
 import NavbarOpened from "./NavbarOpened";
 import { useInView } from "react-intersection-observer";
-
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 const Navbar = () => {
   const [pressed, setPressed] = useState(false);
   const [firstRenderObs, setFirstRenderObs] = useState(true);
+  const [ourService, setOurService] = useState(false);
   const [ref1, inView1] = useInView({
     root: null,
     threshold: 0.1,
@@ -28,6 +29,27 @@ const Navbar = () => {
       };
     }
   }, [pressed]);
+  useEffect(() => {
+    if (ourService) {
+      document
+        .querySelector(".dropDown")
+        ?.classList.remove("dropDown--inactive");
+      document
+        .querySelector(".dropdownMenu")
+        ?.classList.add("dropdownMenu--active");
+      document.querySelector(".arrow")?.classList.add("arrowUp");
+      document.querySelector(".arrow")?.classList.remove("arrowDown");
+    } else {
+      document
+        .querySelector(".dropdownMenu")
+        ?.classList.add("dropdownMenu--inactive");
+      document
+        .querySelector(".dropdownMenu")
+        ?.classList.remove("dropdownMenu--active");
+      document.querySelector(".arrow")?.classList.remove("arrowUp");
+      document.querySelector(".arrow")?.classList.add("arrowDown");
+    }
+  }, [ourService]);
   useEffect(() => {
     if (firstRenderObs) return;
     if (!inView1) {
@@ -66,25 +88,53 @@ const Navbar = () => {
       >
         <div className="pl-5 pt-2 flex items-center">
           <Link href="/">
-            <Image
-              src={Logo}
-              width={202}
-              height={70}
-              style={{ cursor: "pointer" }}
-            />
+            <div>
+              <Image
+                src={Logo}
+                width={202}
+                height={70}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
           </Link>
           <div className="flex gap-8 pl-20">
             <div className="nav-link">
               <Link href="/about-us">About Us</Link>
             </div>
+
             <div className="nav-link">
-              <Link href="/market">Market</Link>
+              <Link href="/industries">Industries</Link>
             </div>
-            <div className="nav-link">
-              <Link href="/it">IT</Link>
-            </div>
-            <div className="nav-link">
-              <Link href="/our-services">Our Services</Link>
+            <div>
+              <div
+                className="nav-link"
+                onClick={() => {
+                  setOurService((prev) => !prev);
+                }}
+              >
+                <div className="flex items-center">
+                  Our Services
+                  <div className="arrowDown arrow">
+                    <MdOutlineKeyboardArrowDown size={30} />
+                  </div>
+                </div>
+              </div>
+              <div
+                className={`flex flex-col absolute bg-[ #ccffee] w-[100%] pl-5 dropdownMenu mt-4`}
+              >
+                <div className="subLink">
+                  <Link href={"/biotech"}>Biotech</Link>
+                </div>
+                <div className="subLink">
+                  <Link href={"/biotech"}>Fintech</Link>
+                </div>
+                <div className="subLink">
+                  <Link href={"/biotech"}>IOT</Link>
+                </div>
+                <div className="subLink">
+                  <Link href={"/biotech"}>Mech</Link>
+                </div>
+              </div>
             </div>
             <div className="nav-link">
               <Link href="/dashboard">Job Dashboard</Link>

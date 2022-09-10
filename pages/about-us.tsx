@@ -32,12 +32,12 @@ const AboutUs: NextPage = () => {
         <div className="flex justify-start gap-3 mt-36">
           <div className=" border-cyan-800 border-l-4  ml-96 "></div>
           <div className="text-[5rem]  leading-[6rem] font-bold ml-4 relative tracking-wide">
-            What We Offer
+            Who We Offer
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
           <div className="flex gap-48 mb-20 mt-20">
-            <div className="rounded-[8rem] bg-yellow-100 w-[30rem] h-[25rem] flex flex-col justify-centers items-center shadow-md">
+            <div className="rounded-[8rem] bg-blue-300 w-[30rem] h-[25rem] flex flex-col justify-centers items-center shadow-md">
               <div className="w-[90%] text-center m-auto">
                 <Text className="text-[2.6rem] text-gray-800 ">
                   Customer Oriented
@@ -48,7 +48,7 @@ const AboutUs: NextPage = () => {
                 </Text>
               </div>
             </div>
-            <div className="rounded-[8rem] bg-yellow-100 w-[30rem] h-[25rem] flex flex-col justify-centers items-center  shadow-md">
+            <div className="rounded-[8rem] bg-blue-300 w-[30rem] h-[25rem] flex flex-col justify-centers items-center  shadow-md">
               <div className="w-[90%] text-center m-auto">
                 <Text className="text-[2.6rem] text-gray-800 m-auto">
                   Reliability
@@ -61,7 +61,7 @@ const AboutUs: NextPage = () => {
             </div>
           </div>
           <div className="flex gap-96">
-            <div className="rounded-[8rem] bg-yellow-100 w-[35rem] h-[25rem] flex flex-col justify-centers items-center  shadow-md">
+            <div className="rounded-[8rem] bg-blue-300 w-[35rem] h-[25rem] flex flex-col justify-centers items-center  shadow-md">
               <div className="w-[90%] text-center m-auto">
                 <Text className="text-[2.6rem] text-gray-800 m-auto">
                   Specialized Expertise
@@ -73,7 +73,7 @@ const AboutUs: NextPage = () => {
               </div>
             </div>
             <div>
-              <div className="rounded-[8rem] bg-yellow-100 w-[35rem] h-[25rem] flex flex-col justify-centers items-center  shadow-md">
+              <div className="rounded-[8rem] bg-blue-300 w-[35rem] h-[25rem] flex flex-col justify-centers items-center  shadow-md">
                 <div className="w-[90%] text-center m-auto ">
                   <Text className="text-[2.6rem] text-gray-800 m-auto">
                     International Presence
@@ -88,8 +88,16 @@ const AboutUs: NextPage = () => {
           </div>
         </div>
       </div>
+      {/* <div className="mt-48">
+        <div className="flex justify-start gap-3 mt-36">
+          <div className=" border-cyan-800 border-l-4  ml-96 "></div>
+          <div className="text-[5rem]  leading-[6rem] font-bold ml-4 relative tracking-wide">
+            Past Projects
+          </div>
+        </div>
+      </div> */}
       <div className="flex flex-col items-center justify-center mt-48 mb-48">
-        <Text className="text-[4.5rem] font-semibold text-[#5dc6f1] ">
+        <Text className="text-[4.5rem] font-semibold text-blue-900 ">
           Our Values
         </Text>
         <div className="flex gap-12 w-[80%] items-center justify-center">
@@ -122,6 +130,7 @@ const AboutUs: NextPage = () => {
           </div>
         </div>
       </div>
+      <div></div>
     </div>
   );
 };

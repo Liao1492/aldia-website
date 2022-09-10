@@ -11,7 +11,7 @@ export const OurSolutions = () => {
   const text1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Delenitirerum harum optio quibusdam, facilis illum ex magni magnam voluptatum in cum quia numquam perferendis! Quasi.`;
   return (
     <div className="flex justify-center mt-32 flex-col items-center">
-      <Heading1 className="tracking-wide " fontSize="4.5rem">
+      <Heading1 className="tracking-wide " fontSize="5.5rem">
         Our Focus
       </Heading1>
       <Heading3 fontWeight="500" fontSize="2.5rem" className="mt-8">

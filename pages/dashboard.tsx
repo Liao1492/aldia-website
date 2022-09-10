@@ -1,9 +1,11 @@
 import type { NextPage } from "next";
+import { useState } from "react";
 import { Box, Stack, Input } from "@mantine/core";
 import JobDetail from "../src/components/common/Dashboard/JobDetail";
 import { FiSearch } from "react-icons/fi";
 import JobInformation from "../src/components/JobInformation";
 const Dashboard: NextPage = () => {
+  const [activeElement, setActiveElement] = useState("");
   return (
     <div className="pt-48 w-[90%] m-auto relative z-5 mb-10">
       <div className="flex bg-[#f1f3f5] pt-10 pb-10 rounded-3xl">
@@ -26,16 +28,52 @@ const Dashboard: NextPage = () => {
               borderRadius: theme.radius.md,
             })}
           >
-            <JobDetail />
-            <JobDetail />
-            <JobDetail />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={1}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={2}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={3}
+            />
 
-            <JobDetail />
-            <JobDetail />
-            <JobDetail />
-            <JobDetail />
-            <JobDetail />
-            <JobDetail />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={4}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={1}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={1}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={1}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={1}
+            />
+            <JobDetail
+              setActiveElement={setActiveElement}
+              activeElement={activeElement}
+              id_num={1}
+            />
           </Stack>
         </Box>
         <Box
