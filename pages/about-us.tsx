@@ -32,7 +32,7 @@ const AboutUs: NextPage = () => {
         <div className="flex justify-start gap-3 mt-36">
           <div className=" border-cyan-800 border-l-4  ml-96 "></div>
           <div className="text-[5rem]  leading-[6rem] font-bold ml-4 relative tracking-wide">
-            Who We Offer
+            What We Offer
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">

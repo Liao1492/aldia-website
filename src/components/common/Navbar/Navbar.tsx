@@ -98,11 +98,21 @@ const Navbar = () => {
             </div>
           </Link>
           <div className="flex gap-8 pl-20">
-            <div className="nav-link">
+            <div
+              className="nav-link"
+              onClick={() => {
+                setOurService(false);
+              }}
+            >
               <Link href="/about-us">About Us</Link>
             </div>
 
-            <div className="nav-link">
+            <div
+              className="nav-link"
+              onClick={() => {
+                setOurService(false);
+              }}
+            >
               <Link href="/industries">Industries</Link>
             </div>
             <div>
@@ -136,15 +146,20 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-            <div className="nav-link">
+            <div
+              className="nav-link"
+              onClick={() => {
+                setOurService(false);
+              }}
+            >
               <Link href="/dashboard">Job Dashboard</Link>
             </div>
           </div>
         </div>
 
         <div className="flex pr-10 gap-14">
-          <Link href="/">Carrers</Link>
-          <Link href="/">Contact US</Link>
+          <Link href="/careers">Careers</Link>
+          <Link href="/contact-us">Contact US</Link>
         </div>
       </div>
       <div>

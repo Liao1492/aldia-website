@@ -1,12 +1,15 @@
 import React from "react";
 import styles from "./button.module.scss";
-export const ButtonMain = () => {
+interface IProps {
+  children: React.ReactNode;
+}
+export const ButtonMain = ({ children }: IProps) => {
   return (
     <div>
       <button
         className={`${styles["button"]} ${styles["button--pipaluk"]} ${styles["button--text-thick"]} `}
       >
-        Learn More
+        {children}
       </button>
     </div>
   );

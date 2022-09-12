@@ -29,7 +29,7 @@ const Hero = () => {
               Engineering Services. <br />
               Company Motto or Slogan if possible
             </BodyText>
-            <ButtonMain />
+            <ButtonMain>Learn More</ButtonMain>
           </div>
         </div>
       </div>

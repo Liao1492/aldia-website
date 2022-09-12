@@ -30,18 +30,40 @@ const ServiceOffered = () => {
   console.log(inView4);
 
   useEffect(() => {
+    // if (inView1) {
+    //   document.querySelector("#firstCont")?.classList.add("stroke--active1");
+    //   document.querySelector("#firstCont")?.classList.remove("stroke--left");
+    // } else if (inView2) {
+    //   document.querySelector("#secondCont")?.classList.add("stroke--active2");
+    //   document.querySelector("#secondCont")?.classList.remove("stroke--right");
+    // } else if (inView3) {
+    //   document.querySelector("#thirdCont")?.classList.add("stroke--active1");
+    //   document.querySelector("#thirdCont")?.classList.remove("stroke--left");
+    // } else if (inView4) {
+    //   document.querySelector("#fourthCont")?.classList.add("stroke--active2");
+    //   document.querySelector("#fourthCont")?.classList.remove("stroke--right");
+    // }
     if (inView1) {
-      document.querySelector("#firstCont")?.classList.add("stroke--active1");
-      document.querySelector("#firstCont")?.classList.remove("stroke--left");
-    } else if (inView2) {
-      document.querySelector("#secondCont")?.classList.add("stroke--active2");
-      document.querySelector("#secondCont")?.classList.remove("stroke--right");
-    } else if (inView3) {
-      document.querySelector("#thirdCont")?.classList.add("stroke--active1");
-      document.querySelector("#thirdCont")?.classList.remove("stroke--left");
-    } else if (inView4) {
-      document.querySelector("#fourthCont")?.classList.add("stroke--active2");
-      document.querySelector("#fourthCont")?.classList.remove("stroke--right");
+      setTimeout(() => {
+        document.querySelector("#firstCont")?.classList.add("stroke--active1");
+        document.querySelector("#firstCont")?.classList.remove("stroke--left");
+      }, 1);
+      setTimeout(() => {
+        document.querySelector("#secondCont")?.classList.add("stroke--active2");
+        document
+          .querySelector("#secondCont")
+          ?.classList.remove("stroke--right");
+      }, 1);
+      setTimeout(() => {
+        document.querySelector("#thirdCont")?.classList.add("stroke--active1");
+        document.querySelector("#thirdCont")?.classList.remove("stroke--left");
+      }, 1);
+      setTimeout(() => {
+        document.querySelector("#fourthCont")?.classList.add("stroke--active2");
+        document
+          .querySelector("#fourthCont")
+          ?.classList.remove("stroke--right");
+      }, 1);
     }
   }, [inView1, inView2, inView3, inView4]);
 
