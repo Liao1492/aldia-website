@@ -39,7 +39,7 @@ const ContactUs: NextPage = () => {
       <div className="w-[80%] m-auto">
         <Divider />
       </div>
-      <div className="flex justify-around gap-11">
+      <div className="flex justify-center gap-11">
         <div className="w-[40%] mt-32 ">
           <div className="flex items-center gap-4 mb-6">
             <GiPositionMarker size={30} fill={"#5dc6f1"} />

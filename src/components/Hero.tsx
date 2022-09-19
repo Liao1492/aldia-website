@@ -5,13 +5,13 @@ const Hero = () => {
   return (
     <>
       <div className="background-image">
-        <div className="hero-section ml-36 ">
+        <div className="hero-section ml-52 ">
           <div className="flex mt-36">
             <Heading1
-              fontSize="6.6rem"
+              fontSize="6rem"
               className="w-[40%]"
               style={{ lineHeight: "7.6rem" }}
-              fontWeight="900"
+              fontWeight="800"
             >
               Engineering
               <br /> Delivery Innovation
@@ -21,7 +21,7 @@ const Hero = () => {
             <BodyText
               stress
               size="lg"
-              fontWeight="400"
+              fontWeight="500"
               fontSize="2rem"
               lineHeight="2.5rem"
             >

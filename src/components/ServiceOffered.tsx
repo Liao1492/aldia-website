@@ -53,17 +53,17 @@ const ServiceOffered = () => {
         document
           .querySelector("#secondCont")
           ?.classList.remove("stroke--right");
-      }, 1);
+      }, 100);
       setTimeout(() => {
         document.querySelector("#thirdCont")?.classList.add("stroke--active1");
         document.querySelector("#thirdCont")?.classList.remove("stroke--left");
-      }, 1);
+      }, 300);
       setTimeout(() => {
         document.querySelector("#fourthCont")?.classList.add("stroke--active2");
         document
           .querySelector("#fourthCont")
           ?.classList.remove("stroke--right");
-      }, 1);
+      }, 500);
     }
   }, [inView1, inView2, inView3, inView4]);
 
