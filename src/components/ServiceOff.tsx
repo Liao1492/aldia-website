@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Service from "./Service";
 import Image from "next/image";
 import { Text } from "@mantine/core";
 import { ButtonMain } from "./common/Button/Button";
