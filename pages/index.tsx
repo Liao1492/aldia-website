@@ -6,8 +6,7 @@ import { GetInTouch } from "../src/components/GetInTouch";
 import Hero from "../src/components/Hero";
 import { OurSolutions } from "../src/components/OurSolutions";
 import ServiceOff from "../src/components/ServiceOff";
-import ServiceOffered from "../src/components/ServiceOffered";
-
+import OurPartners from "../src/components/OurPartners";
 const Home: NextPage = () => {
   return (
     <div>
@@ -16,7 +15,7 @@ const Home: NextPage = () => {
       {/* <ServiceOffered /> */}
       <ServiceOff />
       <DashboardMain />
-
+      <OurPartners />
       <GetInTouch />
     </div>
   );

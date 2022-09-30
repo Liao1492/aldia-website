@@ -133,16 +133,13 @@ const Navbar = () => {
                 className={`flex flex-col absolute bg-[ #ccffee] w-[100%] pl-5 dropdownMenu mt-4`}
               >
                 <div className="subLink">
-                  <Link href={"/biotech"}>Biotech</Link>
+                  <Link href={"/biotech"}>Service 1</Link>
                 </div>
                 <div className="subLink">
-                  <Link href={"/biotech"}>Fintech</Link>
+                  <Link href={"/biotech"}>Service 2</Link>
                 </div>
                 <div className="subLink">
-                  <Link href={"/biotech"}>IOT</Link>
-                </div>
-                <div className="subLink">
-                  <Link href={"/biotech"}>Mech</Link>
+                  <Link href={"/biotech"}>Service 3</Link>
                 </div>
               </div>
             </div>

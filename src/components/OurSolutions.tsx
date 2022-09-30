@@ -27,14 +27,14 @@ export const OurSolutions = () => {
         />
         <CardInfo
           text={text1}
-          title={"Hardware"}
+          title={"Electronic Product"}
           titlesecond={"Development"}
           imageSrc={hardware}
         />
         <CardInfo
           text={text1}
-          title={"Software"}
-          titlesecond={"Development"}
+          title={"Digital"}
+          titlesecond={"Transformation"}
           imageSrc={software}
         />
         {/* <Card

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Text } from "@mantine/core";
 const DashboardMain = () => {
   return (
-    <div className="bg-slate-100 pt-48 pb-48 mt-48">
+    <div className="bg-slate-50 pt-48 pb-48 mt-48">
       <div className="flex w-[95%] m-auto relative z-2  items-end gap-24  justify-center">
         <div className="w-[40%] h-[75vh]">
           <JobDashboard rounded />

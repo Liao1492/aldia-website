@@ -25,9 +25,6 @@ const ContactUs: NextPage = () => {
             <div className="cursor-pointer">
               <FaTwitter size={50} />
             </div>
-            <div className="cursor-pointer">
-              <FaGooglePlusG size={50} />
-            </div>
           </div>
           <Heading1 fontSize="7rem">Contact Us</Heading1>
           <Text className="w-[40%] text-[2rem] mt-12">
@@ -56,7 +53,7 @@ const ContactUs: NextPage = () => {
             <Text>Phone: +44 (0) 2032 875 156</Text>
             <Text>Email: info@aldiatechnologies.com</Text>
           </div>
-          <div className="flex items-center gap-4 mb-6">
+          {/* <div className="flex items-center gap-4 mb-6">
             <GiPositionMarker size={30} fill={"#5dc6f1"} />
             <Text className="text-[2rem] font-bold">ALDIA – Sweden</Text>
           </div>
@@ -70,15 +67,15 @@ const ContactUs: NextPage = () => {
           <div className="flex items-center gap-4 mb-6">
             <GiPositionMarker size={30} fill={"#5dc6f1"} />
             <Text className="text-[2rem] font-bold">ALDIA – Spain</Text>
-          </div>
-          <div className="w-[75%]">
+          </div> */}
+          {/* <div className="w-[75%]">
             <Divider />
           </div>
           <div className="mt-6 text-gray-500 text-[1.8rem] mb-10">
             <Text>Carreta canillas 134</Text>
             <Text>28043 Madrid</Text>
             <Text>Tel: +34 917 590 286</Text>
-          </div>
+          </div> */}
         </div>
         <div className="mt-32 pb-32 w-[30%]">
           <ContactsUsFrom />

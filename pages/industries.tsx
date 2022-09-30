@@ -23,12 +23,16 @@ const Market: NextPage = () => {
         </div>
       </div>
       <div className="flex justify-center gap-10 mb-10 mt-48">
-        <IndustryCard />
-        <IndustryCard />
+        <IndustryCard title="Remote Surgery" />
+        <IndustryCard title="Healthcare" />
+      </div>
+      <div className="flex justify-center gap-10 mb-10">
+        <IndustryCard title="Transport" />
+        <IndustryCard title="Smart Manufacturing" />
       </div>
       <div className="flex justify-center gap-10 mb-48">
-        <IndustryCard />
-        <IndustryCard />
+        <IndustryCard title="Biomedical Technologies" />
+        <IndustryCard title="Finance" />
       </div>
     </div>
   );

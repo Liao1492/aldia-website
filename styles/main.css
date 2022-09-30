@@ -743,6 +743,19 @@ input[type=text] {
 .line-service__fourth {
   height: 240rem;
 }
+.line-service__fifth {
+  height: 300rem;
+}
+.line-service__sixth {
+  height: 360rem;
+}
+
+.image-partner {
+  transition: all 0.2s;
+}
+.image-partner:hover {
+  transform: scale(1.1);
+}
 
 .blurred {
   filter: blur(0.5rem);

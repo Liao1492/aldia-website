@@ -744,8 +744,19 @@ input[type="text"] {
   &__fourth {
     height: 240rem;
   }
+  &__fifth {
+    height: 300rem;
+  }
+  &__sixth {
+    height: 360rem;
+  }
 }
-
+.image-partner {
+  transition: all 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 // Blur
 .blurred {
   filter: blur(0.5rem);

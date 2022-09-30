@@ -35,10 +35,6 @@ const Careers: NextPage = () => {
             You will be involved in International projects, continuously working
             in connection with innovative and High-tech opportunities. We build
             strong relationships with both our employees and our clients. . In
-            ALDIA Technologies we have embedded the International philosophy
-            meeting corporate challenges head-on, delivering our commitments,
-            being passionate about what we do with network connection and a
-            strong sense of team spiri
           </CardCarrers>
           <CardCarrers
             icon={<IoIosPeople size={60} fill={"#1E3A8A"} />}
@@ -49,8 +45,6 @@ const Careers: NextPage = () => {
             wide range of different personality types, companies, job
             specifications. Languages: Opportunities to learn a new language or
             improve your English Promoting: Growth of knowledge Expertise:
-            Identifying and making the most of rare and promising skills, assets
-            both for the growth of ALDIA and of our clients.
           </CardCarrers>
           <CardCarrers
             icon={<GiTeacher size={60} fill={"#1E3A8A"} />}
@@ -60,8 +54,6 @@ const Careers: NextPage = () => {
             improvement in technical skills, in addition to our capacity to
             operate in a multicultural and International environment. We commit
             to train each of our consultant every year. The development of
-            knowledge and skills is a constant and essential part of the ALDIA
-            experience.
           </CardCarrers>
           <CardCarrers
             icon={<GiBigGear size={60} fill={"#1E3A8A"} />}
