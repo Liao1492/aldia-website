@@ -6,7 +6,7 @@ const AboutUsComp = () => {
       <div className="flex justify-start gap-3 mt-36 mb-32">
         <div className=" border-cyan-800 border-l-4  ml-96 "></div>
         <div className="text-[5rem]  leading-[6rem] font-bold ml-4 relative tracking-wide text-blue-900">
-          What We Are
+          Who We Are
         </div>
       </div>
       <div className="w-[50%] m-auto aboutInfo">
