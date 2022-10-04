@@ -336,13 +336,13 @@ body {
 }
 
 .hero-section {
-  padding-top: 10rem;
+  padding-top: 20rem;
   display: flex;
   justify-items: center;
   .imageHero {
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-right: 10rem;
-    width: 55%;
+    width: 75%;
   }
 }
 .hero-container {
@@ -801,7 +801,7 @@ h1 {
 
 .aboutInfo {
   margin-top: 5rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-align: justify;
   .corner {
     border: 4px solid #5dc6f1;

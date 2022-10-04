@@ -39,8 +39,8 @@ const CardInfo = ({ title, titlesecond, imageSrc, text }: IProps) => {
         withBorder
         className="bg-[#5dc6f1] max-w-[30rem] card__side card__side--back"
       >
-        <div className="h-[100%] flex justify-center items-center text-justify">
-          <Text className="text-3xl p-6 pt-14">{text}</Text>
+        <div className="h-[100%] flex justify-center items-center text-center">
+          <Text className="text-2xl p-6 pt-14">{text}</Text>
 
           {/* <Button
             size="lg"
