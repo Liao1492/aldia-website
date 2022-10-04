@@ -11,28 +11,32 @@ export const OurSolutions = () => {
   const text1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Delenitirerum harum optio quibusdam, facilis illum ex magni magnam voluptatum in cum quia numquam perferendis! Quasi.`;
   return (
     <div className="flex justify-center mt-32 flex-col items-center">
-      <Heading1 className="tracking-wide " fontSize="5.5rem">
+      <Heading1 className="tracking-wide text-blue-900" fontSize="5.5rem">
         Our Focus
       </Heading1>
-      <Heading3 fontWeight="500" fontSize="2.5rem" className="mt-8">
+      <Heading3 fontWeight="500" fontSize="2.5rem" className="mt-16">
         We offer state-of-the-art specialized solutions for high-tech projects
       </Heading3>
 
       <div className="flex items-center gap-14 mt-32">
         <CardInfo
-          text={text1}
+          text={
+            "With the future heading in a more digital environment, let ALDIA help you embrace it in the correct manner. Our experts have experience throughout the whole embedded software process. We ensure the most suitable strategy is carried out utilizing the most cost-effective approach.           "
+          }
           title={"Embeded"}
           titlesecond={"Software"}
           imageSrc={softEmb}
         />
         <CardInfo
-          text={text1}
+          text={`The strategy for digital transformation isn´t a new concept yet many businesses lack in this area and have a long way to go to optimize performance. It is crucial for companies in today’s competitive environment to take action and gain any slight advantage possible. Appling digital technologies and ways of working at scale has many benefits. It embraces a cultural change, creates continual learning, is sustainable and cost effective. `}
           title={"Electronic Product"}
           titlesecond={"Development"}
           imageSrc={hardware}
         />
         <CardInfo
-          text={text1}
+          text={
+            "The strategy for digital transformation isn´t a new concept yet many businesses lack in this area and have a long way to go to optimize performance. It is crucial for companies in today’s competitive environment to take action and gain any slight advantage possible. Appling digital technologies and ways of working at scale has many benefits. It embraces a cultural change, creates continual learning, is sustainable and cost effective. "
+          }
           title={"Digital"}
           titlesecond={"Transformation"}
           imageSrc={software}

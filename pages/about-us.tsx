@@ -28,7 +28,7 @@ const AboutUs: NextPage = () => {
           to quickly develop the best products.
         </Text>
       </div>
-      <div className="mt-48">
+      {/* <div className="mt-48">
         <div className="flex justify-start gap-3 mt-36">
           <div className=" border-cyan-800 border-l-4  ml-96 "></div>
           <div className="text-[5rem]  leading-[6rem] font-bold ml-4 relative tracking-wide">
@@ -87,7 +87,7 @@ const AboutUs: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <div className="mt-48">
         <div className="flex justify-start gap-3 mt-36">
           <div className=" border-cyan-800 border-l-4  ml-96 "></div>

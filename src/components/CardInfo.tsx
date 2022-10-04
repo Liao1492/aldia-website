@@ -19,18 +19,17 @@ const CardInfo = ({ title, titlesecond, imageSrc, text }: IProps) => {
         withBorder
         className="bg-[#5dc6f1] card__side card__side--front"
       >
-        <div className="flex flex-col items-center ">
-          <Text className="text-[2.6rem] font-bold mb-10 text-center">
-            {title}
-            <br /> {titlesecond}
+        <div className="flex flex-col items-center">
+          <Text className="text-[3rem] leading-[3.5rem] font-bold mb-10 text-center mt-20">
+            {title} {titlesecond}
           </Text>
           <Image
             src={imageSrc}
             alt="software embedded"
-            height={70}
+            height={90}
             width={100}
           />
-          <Text className="text-2xl p-6 pt-14">{text}</Text>
+          {/* <Text className="text-2xl p-6 pt-14">{text}</Text> */}
         </div>
       </Card>
       <Card
@@ -40,15 +39,17 @@ const CardInfo = ({ title, titlesecond, imageSrc, text }: IProps) => {
         withBorder
         className="bg-[#5dc6f1] max-w-[30rem] card__side card__side--back"
       >
-        <div className="h-[100%] flex justify-center items-center">
-          <Button
+        <div className="h-[100%] flex justify-center items-center text-justify">
+          <Text className="text-3xl p-6 pt-14">{text}</Text>
+
+          {/* <Button
             size="lg"
             className="text-3xl buttonCard"
             leftIcon={<HiOutlineInformationCircle size={18} />}
           >
             {" "}
             Learn More
-          </Button>
+          </Button> */}
         </div>
       </Card>
     </div>

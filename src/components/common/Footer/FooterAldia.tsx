@@ -125,7 +125,17 @@ interface FooterLinksProps {
 }
 
 const data = [
-  { title: "Market", links: [{ link: "/", label: "Biotech" }] },
+  {
+    title: "Market",
+    links: [
+      { link: "/industries", label: "Remote Surgery" },
+      { link: "/industries", label: "Healthcare" },
+      { link: "/industries", label: "Transport" },
+      { link: "/industries", label: "Smart Manufactoring" },
+      { link: "/industries", label: "Biomedical Technologies" },
+      { link: "/industries", label: "Finance" },
+    ],
+  },
   { title: "IT", links: [{ link: "/", label: "Cars" }] },
   { title: "Our services", links: [{ link: "/", label: "Consulatation" }] },
 ];

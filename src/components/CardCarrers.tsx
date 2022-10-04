@@ -15,13 +15,13 @@ const CardCarrers = ({ children, icon, title }: IProps) => {
             {/* <BiWorld size={60} fill={"#1E3A8A"} /> */}
             {icon}
           </div>
-          <Text className="text-[4rem] font-bold text-blue-900 leading-[4rem] ">
+          <Text className="text-[4rem] font-bold text-blue-900 leading-[4rem]">
             {title}
           </Text>
         </div>
       </div>
 
-      <div className="cardCareers--inside text-[1.8rem] p-12 flex items-center">
+      <div className="cardCareers--inside text-[1.8rem] p-12 flex items-center  text-justify">
         <Text>{children}</Text>
       </div>
     </div>

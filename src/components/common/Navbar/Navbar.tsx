@@ -63,7 +63,7 @@ const Navbar = () => {
         ?.classList.remove("burger-nav__opened");
       document.querySelector(".navbar")?.classList.remove("navbar__none");
     }
-  }, [inView1, pressed]);
+  }, [inView1, pressed, firstRenderObs]);
   const handlePressed = () => {
     if (!pressed) {
       document.querySelector(".item-a")?.classList.add("item-a__opened");
@@ -83,7 +83,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className="flex items-center justify-between font-bold navbar"
+        className="flex items-center justify-between font-bold navbar "
         ref={ref1}
       >
         <div className="pl-5 pt-2 flex items-center">
@@ -98,38 +98,38 @@ const Navbar = () => {
             </div>
           </Link>
           <div className="flex gap-8 pl-20">
-            <div
+            {/* <div
               className="nav-link"
               onClick={() => {
                 setOurService(false);
               }}
             >
               <Link href="/about-us">About Us</Link>
-            </div>
+            </div> */}
 
             <div
               className="nav-link"
-              onClick={() => {
-                setOurService(false);
-              }}
+              // onClick={() => {
+              //   setOurService(false);
+              // }}
             >
               <Link href="/industries">Industries</Link>
             </div>
             <div>
               <div
                 className="nav-link"
-                onClick={() => {
-                  setOurService((prev) => !prev);
-                }}
+                // onClick={() => {
+                //   setOurService((prev) => !prev);
+                // }}
               >
                 <div className="flex items-center">
                   Our Services
-                  <div className="arrowDown arrow">
+                  {/* <div className="arrowDown arrow">
                     <MdOutlineKeyboardArrowDown size={30} />
-                  </div>
+                  </div> */}
                 </div>
               </div>
-              <div
+              {/* <div
                 className={`flex flex-col absolute bg-[ #ccffee] w-[100%] pl-5 dropdownMenu mt-4`}
               >
                 <div className="subLink">
@@ -141,21 +141,29 @@ const Navbar = () => {
                 <div className="subLink">
                   <Link href={"/biotech"}>Service 3</Link>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div
               className="nav-link"
-              onClick={() => {
-                setOurService(false);
-              }}
+              // onClick={() => {
+              //   setOurService(false);
+              // }}
             >
               <Link href="/dashboard">Job Dashboard</Link>
+            </div>
+            <div
+              className="nav-link"
+              // onClick={() => {
+              //   setOurService(false);
+              // }}
+            >
+              <Link href="/careers">Carrers</Link>
             </div>
           </div>
         </div>
 
         <div className="flex pr-10 gap-14">
-          <Link href="/careers">Careers</Link>
+          {/* <Link href="/careers">Careers</Link> */}
           <Link href="/contact-us">Contact US</Link>
         </div>
       </div>

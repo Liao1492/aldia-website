@@ -2,7 +2,13 @@ import React, { useEffect } from "react";
 import Image from "next/image";
 import { Text } from "@mantine/core";
 import { ButtonMain } from "./common/Button/Button";
-import biotech from "../assets/img/medicine.svg";
+import medicine from "../assets/img/med.svg";
+import transport from "../assets/img/transport.svg";
+import finance from "../assets/img/finance.svg";
+import biotech from "../assets/img/biomedical.svg";
+import factory from "../assets/img/factory.svg";
+import retails from "../assets/img/retail.svg";
+
 import { Heading1 } from "./common/typography";
 import { useInView } from "react-intersection-observer";
 const ServiceOff = () => {
@@ -77,18 +83,9 @@ const ServiceOff = () => {
   }, [inViewArray]);
   return (
     <>
-      <div className="flex justify-start gap-3 mt-96">
-        <div className=" border-[#5dc6f1] border-l-[6px] ml-32 "></div>
-        <div
-          className="text-[6rem]  leading-[6rem] font-bold ml-4 relative tracking-wide text-blue-900"
-          ref={ref1}
-        >
-          Industries
-        </div>
-      </div>
-      <div className="mt-48 relative">
+      <div className="mt-48 relative pb-48">
         <div className="line-service "></div>
-        <div className="box-service blurred blur-div ">
+        {/* <div className="box-service blurred blur-div ">
           <div className="box-service__left w-[40%]">
             <div>
               <Image src={biotech} alt="medicine" />
@@ -96,7 +93,7 @@ const ServiceOff = () => {
           </div>
           <div className="box-service__middle"></div>
           <div ref={ref1} className="box-service__right w-[40%] pl-32">
-            <Heading1 fontSize="5rem">Remote Surgery </Heading1>
+            <Heading1 fontSize="4.2rem">Remote Surgery </Heading1>
             <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
               eaque totam voluptatem itaque, vel debitis quod ullam aliquid,
@@ -110,20 +107,21 @@ const ServiceOff = () => {
             </Text>
             <ButtonMain>Learn More</ButtonMain>
           </div>
-        </div>
-        <div ref={ref2} className="box-service blurred blur-div">
+        </div> */}
+        <div ref={ref1} className="box-service blurred blur-div">
           <div className="box-service__right w-[40%] pl-32 ">
-            <Heading1 fontSize="5rem">Healthcare </Heading1>
-            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-              eaque totam voluptatem itaque, vel debitis quod ullam aliquid,
-              illum possimus harum explicabo quisquam porro, unde veritatis modi
-              recusandae corrupti? Molestiae illum eveniet qui dolorum tenetur?
-              Perspiciatis ea maiores necessitatibus debitis! Lorem ipsum dolor
-              sit amet consectetur, adipisicing elit. Vero at molestias illo,
-              explicabo magnam molestiae, impedit inventore aperiam, modi animi
-              itaque quae dolores earum maxime? Quas assumenda deleniti labore
-              nihil?
+            <Heading1 lineHeight="5rem" fontSize="4.2rem">
+              Retail And <br />
+              B2B Business{" "}
+            </Heading1>
+            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16 text-justify">
+              With economic obstacles continuously altering the commercial
+              retail landscape, it is beneficial to have an adviser than can
+              navigate through unexpected events. Here at ALDIA out team
+              provides clear, trusted advice across the full retail spectrum. We
+              offer our services in market research, concept planning, advice on
+              development in current market position, market-entry studies,
+              competitive analysis and branding.
             </Text>
             <ButtonMain>Learn More</ButtonMain>
           </div>
@@ -131,99 +129,103 @@ const ServiceOff = () => {
 
           <div className="box-service__left w-[40%]">
             <div>
-              <Image src={biotech} alt="medicine" />
+              <Image src={retails} alt="medicine" />
             </div>
+          </div>
+        </div>
+        <div ref={ref2} className="box-service blurred blur-div ">
+          <div className="box-service__left w-[40%]">
+            <div>
+              <Image src={transport} alt="medicine" />
+            </div>
+          </div>
+          <div className="box-service__middle"></div>
+
+          <div className="box-service__right w-[40%] pl-32 ">
+            <Heading1 fontSize="4.2rem">Transport </Heading1>
+            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16 text-justify">
+              ALDIA is constantly searching for more environment friendly ways
+              of transportation to reduce the overall carbon footprint being
+              released into the atmosphere. Low carbon transport and safety are
+              the two main priorities we focus on at ALDIA. We also aim to
+              connect people to smarter ways of transport solutions. Smart
+              transport systems bring in greater control and automation to road
+              networks. This eases congestions and overall carbon emissions in
+              addition, it allows for a faster response.
+            </Text>
+            <ButtonMain>Learn More</ButtonMain>
           </div>
         </div>
         <div ref={ref3} className="box-service blurred blur-div ">
-          <div className="box-service__left w-[40%]">
-            <div>
-              <Image src={biotech} alt="medicine" />
-            </div>
+          <div className="box-service__right w-[40%] pl-32 ">
+            <Heading1 lineHeight="5rem" fontSize="4.2rem">
+              Smart Manufacturing{" "}
+            </Heading1>
+            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16 text-justify">
+              Traditional manufacturing facilities have limited flexibility, are
+              outdated and require lots of manual operations. These are
+              frequently time consuming and uneconomical as labor can be quite
+              expensive.
+              <br />
+              <br />
+              With ALDIA´s smart manufacturing consultancy services. We use the
+              industry 4.0 technologies to ensure that our customers production
+              facility is fully equipped which results in significant increase
+              in productivity and efficiency gains.
+            </Text>
+            <ButtonMain>Learn More</ButtonMain>
           </div>
           <div className="box-service__middle"></div>
 
-          <div className="box-service__right w-[40%] pl-32 ">
-            <Heading1 fontSize="5rem">Transport </Heading1>
-            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-              eaque totam voluptatem itaque, vel debitis quod ullam aliquid,
-              illum possimus harum explicabo quisquam porro, unde veritatis modi
-              recusandae corrupti? Molestiae illum eveniet qui dolorum tenetur?
-              Perspiciatis ea maiores necessitatibus debitis! Lorem ipsum dolor
-              sit amet consectetur, adipisicing elit. Vero at molestias illo,
-              explicabo magnam molestiae, impedit inventore aperiam, modi animi
-              itaque quae dolores earum maxime? Quas assumenda deleniti labore
-              nihil?
-            </Text>
-            <ButtonMain>Learn More</ButtonMain>
+          <div className="box-service__left w-[40%]">
+            <div>
+              <Image src={factory} alt="medicine" />
+            </div>
           </div>
         </div>
         <div ref={ref4} className="box-service blurred blur-div ">
-          <div className="box-service__right w-[40%] pl-32 ">
-            <Heading1 lineHeight="5rem" fontSize="5rem">
-              Smart Manufacturing{" "}
-            </Heading1>
-            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-              eaque totam voluptatem itaque, vel debitis quod ullam aliquid,
-              illum possimus harum explicabo quisquam porro, unde veritatis modi
-              recusandae corrupti? Molestiae illum eveniet qui dolorum tenetur?
-              Perspiciatis ea maiores necessitatibus debitis! Lorem ipsum dolor
-              sit amet consectetur, adipisicing elit. Vero at molestias illo,
-              explicabo magnam molestiae, impedit inventore aperiam, modi animi
-              itaque quae dolores earum maxime? Quas assumenda deleniti labore
-              nihil?
-            </Text>
-            <ButtonMain>Learn More</ButtonMain>
-          </div>
-          <div className="box-service__middle"></div>
-
           <div className="box-service__left w-[40%]">
             <div>
               <Image src={biotech} alt="medicine" />
             </div>
+          </div>
+          <div className="box-service__middle"></div>
+
+          <div className="box-service__right w-[40%] pl-32 ">
+            <Heading1 lineHeight="5rem" fontSize="4.2rem">
+              Biomedical Technologies{" "}
+            </Heading1>
+            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16 text-justify">
+              Healthcare is an always expanding industry that faces new
+              challenges daily. This creates a global need for access to reliant
+              healthcare. With such a large demand that increases with the
+              rising population, it is important to cater to this problem with
+              care and the correct utilization of resources. <br />
+              <br />
+              For the reasons mentioned, there is no one who understands this
+              and applies it to their values better than ALDIA does. We
+              recognize the difficulties the healthcare industry possesses and
+              navigate around these issues by resolving them through innovation
+              and sustainability.
+            </Text>
+            <ButtonMain>Learn More</ButtonMain>
           </div>
         </div>
         <div ref={ref5} className="box-service blurred blur-div ">
-          <div className="box-service__left w-[40%]">
-            <div>
-              <Image src={biotech} alt="medicine" />
-            </div>
-          </div>
-          <div className="box-service__middle"></div>
-
           <div className="box-service__right w-[40%] pl-32 ">
-            <Heading1 lineHeight="5rem" fontSize="5rem">
-              Biomedical Technologies{" "}
-            </Heading1>
-            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-              eaque totam voluptatem itaque, vel debitis quod ullam aliquid,
-              illum possimus harum explicabo quisquam porro, unde veritatis modi
-              recusandae corrupti? Molestiae illum eveniet qui dolorum tenetur?
-              Perspiciatis ea maiores necessitatibus debitis! Lorem ipsum dolor
-              sit amet consectetur, adipisicing elit. Vero at molestias illo,
-              explicabo magnam molestiae, impedit inventore aperiam, modi animi
-              itaque quae dolores earum maxime? Quas assumenda deleniti labore
-              nihil?
-            </Text>
-            <ButtonMain>Learn More</ButtonMain>
-          </div>
-        </div>
-        <div ref={ref6} className="box-service blurred blur-div ">
-          <div className="box-service__right w-[40%] pl-32 ">
-            <Heading1 fontSize="5rem">Finance </Heading1>
-            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt
-              eaque totam voluptatem itaque, vel debitis quod ullam aliquid,
-              illum possimus harum explicabo quisquam porro, unde veritatis modi
-              recusandae corrupti? Molestiae illum eveniet qui dolorum tenetur?
-              Perspiciatis ea maiores necessitatibus debitis! Lorem ipsum dolor
-              sit amet consectetur, adipisicing elit. Vero at molestias illo,
-              explicabo magnam molestiae, impedit inventore aperiam, modi animi
-              itaque quae dolores earum maxime? Quas assumenda deleniti labore
-              nihil?
+            <Heading1 fontSize="4.2rem">Finance </Heading1>
+            <Text className="w-[90%] text-[1.8rem] leading-9 mt-16 mb-16 text-justify">
+              ALDIA´s financial services offer much more than just the bottom
+              line of total earnings and losses. Our wealth management experts
+              are passionate and have deep knowledge in the financial industry.
+              We are expanding rapidly due to the exceptional service our
+              experts provide, and the unique insights offered.
+              <br />
+              <br />
+              We focus on audits, tax services through customer experience,
+              cyber security, digital innovation and regulatory solutions. We
+              also have a deep understanding of expansion into new markets,
+              especially in Europe.
             </Text>
             <ButtonMain>Learn More</ButtonMain>
           </div>
@@ -231,7 +233,7 @@ const ServiceOff = () => {
 
           <div className="box-service__left w-[40%]">
             <div>
-              <Image src={biotech} alt="medicine" />
+              <Image src={finance} alt="medicine" />
             </div>
           </div>
         </div>

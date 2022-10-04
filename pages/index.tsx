@@ -7,14 +7,19 @@ import Hero from "../src/components/Hero";
 import { OurSolutions } from "../src/components/OurSolutions";
 import ServiceOff from "../src/components/ServiceOff";
 import OurPartners from "../src/components/OurPartners";
+import OurValues from "../src/components/OurValues";
+import AboutUsComp from "../src/components/AboutUs";
 const Home: NextPage = () => {
   return (
     <div>
       <Hero />
+      <AboutUsComp />
       <OurSolutions />
       {/* <ServiceOffered /> */}
-      <ServiceOff />
-      <DashboardMain />
+      {/* <ServiceOff /> */}
+      {/* <AboutUs /> */}
+      <OurValues />
+      {/* <DashboardMain /> */}
       <OurPartners />
       <GetInTouch />
     </div>

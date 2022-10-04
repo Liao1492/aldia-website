@@ -4,14 +4,17 @@ import Image from "next/image";
 import { Heading1 } from "../src/components/common/typography";
 import { Text } from "@mantine/core";
 import IndustryCard from "../src/components/IndustryCard";
+import ServiceOff from "../src/components/ServiceOff";
 const Market: NextPage = () => {
   return (
-    <div className="pt-48 w-[90%] m-auto relative z-5 mb-10">
+    <div className="pt-48 w-[90%] m-auto relative z-5 pb-10">
       <div className="flex justify-center">
         <Image src={mainImage} alt="collaboration image" height={300} />
       </div>
-      <div className="flex justify-center mt-32 flex-col items-center">
-        <Heading1 fontSize="5rem">Industries</Heading1>
+      <div className="flex jusxtify-center mt-32 flex-col items-center">
+        <Heading1 fontSize="5rem" className="text-blue-900">
+          Industries
+        </Heading1>
         <div className="text-[1.8rem] w-[50%] text-center mt-6">
           <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
@@ -22,7 +25,8 @@ const Market: NextPage = () => {
           </Text>
         </div>
       </div>
-      <div className="flex justify-center gap-10 mb-10 mt-48">
+      <ServiceOff />
+      {/* <div className="flex justify-center gap-10 mb-10 mt-48">
         <IndustryCard title="Remote Surgery" />
         <IndustryCard title="Healthcare" />
       </div>
@@ -33,7 +37,7 @@ const Market: NextPage = () => {
       <div className="flex justify-center gap-10 mb-48">
         <IndustryCard title="Biomedical Technologies" />
         <IndustryCard title="Finance" />
-      </div>
+      </div> */}
     </div>
   );
 };

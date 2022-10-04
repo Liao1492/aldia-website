@@ -108,59 +108,66 @@ export function GetInTouch() {
   const { classes } = useStyles();
 
   return (
-    <Paper shadow="md" radius="lg" className="w-[70%] m-auto mt-32 mb-32">
-      <div className={classes.wrapper}>
-        <div className={classes.contacts}>
-          <Text
-            size="lg"
-            weight={700}
-            className={classes.title}
-            sx={{ color: "#fff" }}
+    <div className="pb-32">
+      <Paper shadow="md" radius="lg" className="w-[70%] m-auto mt-32 ">
+        <div className={classes.wrapper}>
+          <div className={classes.contacts}>
+            <Text
+              size="lg"
+              weight={700}
+              className={classes.title}
+              sx={{ color: "#fff" }}
+            >
+              Contact information
+            </Text>
+
+            <ContactIconsList variant="white" />
+          </div>
+
+          <form
+            className={classes.form}
+            onSubmit={(event) => event.preventDefault()}
           >
-            Contact information
-          </Text>
+            <Text size="lg" weight={700} className={classes.title}>
+              Get in touch with our expert
+            </Text>
 
-          <ContactIconsList variant="white" />
-        </div>
+            <div className={classes.fields}>
+              <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
+                <TextInput label="Your name" placeholder="Your name" />
+                <TextInput
+                  label="Your email"
+                  placeholder="youremail@email.com"
+                  required
+                />
+              </SimpleGrid>
 
-        <form
-          className={classes.form}
-          onSubmit={(event) => event.preventDefault()}
-        >
-          <Text size="lg" weight={700} className={classes.title}>
-            Get in touch with our expert
-          </Text>
-
-          <div className={classes.fields}>
-            <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
-              <TextInput label="Your name" placeholder="Your name" />
               <TextInput
-                label="Your email"
-                placeholder="youremail@email.com"
+                mt="md"
+                label="Subject"
+                placeholder="Subject"
                 required
               />
-            </SimpleGrid>
 
-            <TextInput mt="md" label="Subject" placeholder="Subject" required />
+              <Textarea
+                mt="md"
+                label="Your message"
+                placeholder="Please include all relevant information"
+                minRows={3}
+              />
 
-            <Textarea
-              mt="md"
-              label="Your message"
-              placeholder="Please include all relevant information"
-              minRows={3}
-            />
-
-            <Group position="right" mt="md">
-              <Button
-                type="submit"
-                className={`${classes.control} bg-blue-400`}
-              >
-                Send message
-              </Button>
-            </Group>
-          </div>
-        </form>
-      </div>
-    </Paper>
+              <Group position="right" mt="md">
+                <Button
+                  type="submit"
+                  className={`${classes.control} bg-blue-400`}
+                >
+                  Send message
+                </Button>
+              </Group>
+            </div>
+          </form>
+        </div>
+      </Paper>
+    </div>
   );
 }

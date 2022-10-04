@@ -3,9 +3,9 @@ import "../styles/globals.css";
 import "../styles/main.css";
 import Navbar from "../src/components/common/Navbar/Navbar";
 import FooterAldia from "../src/components/common/Footer/FooterAldia";
-import useViewport from "../src/hooks/useViewport";
-import NavbarMobile from "../src/components/common/Navbar/NavbarMobile";
+import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
   // const { width: currWidth } = useViewport();
   // const changeNavBar = currWidth < 1200;
   return (
@@ -13,7 +13,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       <div className="background bg-slate-50">
         {/* {changeNavBar && <NavbarMobile />} */}
-        <Component {...pageProps} />
+        <div
+          className={`${!router.asPath.includes("dashboard") && `bg-image`}`}
+        >
+          <Component {...pageProps} />
+        </div>
 
         <FooterAldia />
       </div>
