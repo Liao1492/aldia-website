@@ -1,0 +1,19 @@
+.mainContainer {
+  padding-top: 10rem;
+
+  .heroContainer {
+    display: flex;
+    margin-bottom: 10rem;
+    .flexItem {
+      flex: 0 0 50%;
+    }
+    .title {
+      margin-top: 3rem;
+      margin-left: 17rem;
+    }
+    .text {
+      margin-top: 3rem;
+      width: 70%;
+    }
+  }
+}

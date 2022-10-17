@@ -21,7 +21,7 @@ const CardCarrers = ({ children, icon, title }: IProps) => {
         </div>
       </div>
 
-      <div className="cardCareers--inside text-[1.8rem] p-12 flex items-center  text-justify">
+      <div className="cardCareers--inside text-[1.8rem] p-12 flex items-center  ">
         <Text>{children}</Text>
       </div>
     </div>

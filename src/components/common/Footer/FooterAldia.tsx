@@ -136,7 +136,7 @@ const data = [
       { link: "/industries", label: "Finance" },
     ],
   },
-  { title: "IT", links: [{ link: "/", label: "Cars" }] },
+  { title: "Job Dashboard", links: [{ link: "/dashboard", label: "Cars" }] },
   { title: "Our services", links: [{ link: "/", label: "Consulatation" }] },
 ];
 

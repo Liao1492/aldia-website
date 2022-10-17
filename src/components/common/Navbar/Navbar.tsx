@@ -123,7 +123,7 @@ const Navbar = () => {
                 // }}
               >
                 <div className="flex items-center">
-                  Our Services
+                  <Link href="/our-service"> Our Services</Link>
                   {/* <div className="arrowDown arrow">
                     <MdOutlineKeyboardArrowDown size={30} />
                   </div> */}
@@ -157,7 +157,7 @@ const Navbar = () => {
               //   setOurService(false);
               // }}
             >
-              <Link href="/careers">Carrers</Link>
+              <Link href="/careers">Careers</Link>
             </div>
           </div>
         </div>

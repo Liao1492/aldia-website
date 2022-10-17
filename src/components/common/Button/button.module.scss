@@ -65,3 +65,64 @@
 .button--pipaluk.button--inverted:hover::after {
   background-color: #fff;
 }
+
+.btn-container {
+  display: inline-block;
+  margin: 70px auto 0;
+  font-size: 0;
+  border: 1px solid #fff;
+}
+
+.label {
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  width: 200px;
+  padding: 13px 0;
+  transition: all 0.3s ease;
+}
+
+.techno + .label:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: -1;
+  background-color: red;
+  transition: all 0.3s ease;
+}
+
+.techno:checked + .label:before {
+  left: 0;
+}
+
+.techno:checked + .label,
+.engineer:checked + label {
+  color: #000;
+}
+
+// #Technologies + .label:before {
+//   content: "";
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 100%;
+//   z-index: -1;
+//   background-color: #fff;
+//   transition: all 0.3s ease;
+// }
+
+// #Technologies:checked + .label:before {
+//   left: 0;
+// }
+
+// #Technologies:checked + .label,
+// #Engineering:checked + label {
+//   color: #000;
+// }

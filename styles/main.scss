@@ -1,5 +1,5 @@
 @use "sass" as *;
-
+@use "custom" as *;
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -107,37 +107,85 @@
   font-family: "Futura";
   font-style: normal;
   font-weight: 400;
-  src: url("../src/assets/fonts/Futura\ Light\ font.ttf") format("ttf");
+  src: url("../src/assets/fonts/Futura\ Light\ font.ttf");
 }
 @font-face {
   font-family: "Futura";
   font-style: normal;
   font-weight: 500;
-  src: url("../src/assets/fonts/Futura\ Book\ font.ttf") format("ttf");
+  src: url("../src/assets/fonts/Futura\ Book\ font.ttf");
 }
 @font-face {
   font-family: "Futura";
   font-style: normal;
   font-weight: 600;
-  src: url("../src/assets/fonts/futura\ medium\ bt.ttf") format("ttf");
+  src: url("../src/assets/fonts/futura\ medium\ bt.ttf");
 }
 @font-face {
   font-family: "Futura";
   font-style: normal;
   font-weight: 700;
-  src: url("../src/assets/fonts/Futura\ Bold\ font.ttf") format("ttf");
+  src: url("../src/assets/fonts/Futura\ Bold\ font.ttf");
 }
 @font-face {
   font-family: "Futura";
   font-style: normal;
   font-weight: 800;
-  src: url("../src/assets/fonts/Futura\ Extra\ Black\ font.ttf") format("ttf");
+  src: url("../src/assets/fonts/Futura\ Extra\ Black\ font.ttf");
 }
 @font-face {
   font-family: "Futura";
   font-style: normal;
   font-weight: 900;
-  src: url("../src/assets/fonts/Futura\ XBlk\ BT.ttf") format("ttf");
+  src: url("../src/assets/fonts/Futura\ XBlk\ BT.ttf");
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/fonts/Merriweather/Merriweather-Light.ttf");
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/fonts/Merriweather/Merriweather-Regular.ttf");
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/assets/fonts/Merriweather/Merriweather-Black.ttf");
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../src/assets/fonts/Merriweather/Merriweather-Black.ttf");
+}
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../src/assets/fonts/Dosis/Dosis-Regular.ttf");
+}
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../src/assets/fonts/Dosis/Dosis-Medium.ttf");
+}
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../src/assets/fonts/Dosis/Dosis-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Dosis";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../src/assets/fonts/Dosis/Dosis-ExtraBold.ttf");
 }
 #__next {
   overflow: hidden;
@@ -155,11 +203,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Futura";
+  font-family: "Dosis", sans-serif !important;
   font-size: 62.5%;
   overflow-x: hidden;
   color: #19192b;
 }
+
 * {
   box-sizing: border-box;
 }

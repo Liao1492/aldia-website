@@ -11,7 +11,7 @@ const AboutUsComp = () => {
       </div>
       <div className="w-[50%] m-auto aboutInfo">
         <div className="corner">
-          <Text className="p-16">
+          <Text style={{ fontFamily: "Dosis" }} className="p-16">
             ALDIA Technologies is an International company active in the areas
             of Engineering Services and has been rolling out its engineering
             expertise. Covering individual assignments to fixed- price projects
